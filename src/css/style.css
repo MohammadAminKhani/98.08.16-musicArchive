@@ -1,9 +1,27 @@
 .selected{
   color: #aaa;
-  border-color: #aaa;
 }
 .navlink{
   text-decoration: none;
   padding: 0 20px;
   border: solid 1px #aaa
 }
+
+.tbl{
+  padding-top: 5px;
+border: solid #aaa 1px;
+font-size: 12px;
+margin-right: auto;
+    margin-left: auto;
+}
+.tbody{padding-top: 0px}
+.tblLink{
+  padding: 0 10px;
+  text-decoration: none;
+}
+.tblLink , .fn2tr td{
+  border: solid #aaa 1px
+}
+.fn2tr .td1{text-align: center;width: 50px}
+.fn2tr .td2{width: 190px }
+.fn2tr .td3{text-align: center;width: 15px}
