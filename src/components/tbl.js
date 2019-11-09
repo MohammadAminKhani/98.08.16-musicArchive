@@ -7,9 +7,8 @@ export const Tbl = ({key01,filter1}) =>{
   const key001 = !filter1 || !filter1.match(/like/) ?
   key01 : key01.filter(x => x[filter1])
   return (
-    <div>
-    <table className="tbl">
-
+    <div className="tbl">
+    <table>
     <thead >
     <th colSpan={3}>
     <NavLink exact className='tblLink' activeClassName='selected'
@@ -18,8 +17,9 @@ export const Tbl = ({key01,filter1}) =>{
      to="/table/like">Liked Musics</NavLink>
     </th>
     </thead>
-    <div className='tbody'>  </div>
-    <tbody > {key001.map(Fn2)} </tbody> </table> </div>)}
+    <tbody > {key001.map(Fn2)} </tbody>
+    </table>
+    </div>)}
 
 const Fn2 = ({date,music,like}) =>
  <tr className='fn2tr'>
