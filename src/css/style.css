@@ -1,28 +1,24 @@
-body{
-margin-bottom: 0;
-}
-.app{
 
-}
-.main{
-
-}
 .menu {
   position: absolute;
   bottom: 0;
-  /* 2 codes above 4 sticky footer */
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  justify-content: space-around;
+  width: 100%;
+  right: 0px;
 }
-.selected{
-color: #aaa;
-}
-.navlink{
+.menu a{
+background-color: #ffc107;
+color: black;
 text-decoration: none;
-padding: 0 20px;
-border: solid 1px #aaa
+flex: 1;
+padding: 10px ;
+text-align: center;
 }
+.menu .selected{
+  background-color: skyblue;
+}
+
 .tbl{
 padding-top: 5px;
 border: solid #aaa 1px;

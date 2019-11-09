@@ -21,9 +21,9 @@ fn1(x){
   render(){
     const {location,match} = this.props
     return(
-      <div className='app'>
+      <div>
 
-      <div className='main'>
+      <div >
       { location.pathname === '/' ?
       <Home name='Dadashi' number={this.state.value001.length}/> :
       location.pathname === '/about' ?
@@ -32,11 +32,11 @@ fn1(x){
       <Tbl key01={this.state.value001} filter1={match.params.x}/> }
       </div>
 
-      <div className='menu' style={{marginBottom:"20px"}}>
-      <NavLink exact to='/' className='navlink' activeClassName='selected'>Home </NavLink>
-      <NavLink to='/add'  className='navlink' activeClassName='selected'>add </NavLink>
-      <NavLink to='/table'  className='navlink' activeClassName='selected'>table </NavLink>
-      <NavLink to='/about'  className='navlink' activeClassName='selected'>about </NavLink>
+      <div className='menu'>
+      <NavLink exact to='/' activeClassName='selected'>Dashboard </NavLink>
+      <NavLink to='/add' activeClassName='selected'>Add Music</NavLink>
+      <NavLink to='/table' activeClassName='selected'>Archived Music</NavLink>
+      <NavLink to='/about' activeClassName='selected'>Info</NavLink>
       </div>
 
     </div> )
