@@ -37,6 +37,10 @@ fn1(x){
       <NavLink to='/add' activeClassName='selected'>Add Music</NavLink>
       <NavLink to='/table' activeClassName='selected'>Archived Music</NavLink>
       <NavLink to='/about' activeClassName='selected'>Info</NavLink>
+
+
+
+
       </div>
 
     </div> )
