@@ -21,9 +21,9 @@ fn1(x){
   render(){
     const {location,match} = this.props
     return(
-      <div>
+      <div className='app'>
 
-      <div >
+      <div className='main'>
       { location.pathname === '/' ?
       <Home name='Dadashi' number={this.state.value001.length}/> :
       location.pathname === '/about' ?
@@ -34,12 +34,9 @@ fn1(x){
 
       <div className='menu'>
       <NavLink exact to='/' activeClassName='selected'>Dashboard </NavLink>
-      <NavLink to='/add' activeClassName='selected'>Add Music</NavLink>
-      <NavLink to='/table' activeClassName='selected'>Archived Music</NavLink>
+      <NavLink to='/add' activeClassName='selected'>Add</NavLink>
+      <NavLink to='/table' activeClassName='selected'>Archived</NavLink>
       <NavLink to='/about' activeClassName='selected'>Info</NavLink>
-
-
-
 
       </div>
 

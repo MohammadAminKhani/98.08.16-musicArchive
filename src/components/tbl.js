@@ -12,9 +12,9 @@ export const Tbl = ({key01,filter1}) =>{
     <thead >
     <th colSpan={3}>
     <NavLink exact className='tblLink' activeClassName='selected'
-     to="/table">All Musics</NavLink>
+     to="/table">All</NavLink>
     <NavLink className='tblLink' activeClassName='selected'
-     to="/table/like">Liked Musics</NavLink>
+     to="/table/like">Liked</NavLink>
     </th>
     </thead>
     <tbody > {key001.map(Fn2)} </tbody>

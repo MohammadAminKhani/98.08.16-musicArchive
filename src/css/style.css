@@ -1,4 +1,12 @@
-
+.center{
+  text-align: center;
+  }
+  .main{
+  height: -webkit-fill-available;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
 .menu {
   position: absolute;
   bottom: 0;
@@ -15,15 +23,13 @@ flex: 1;
 padding: 10px ;
 text-align: center;
 }
-.menu .selected{
+.menu .selected,.selected{
   background-color: skyblue;
 }
 .tbl{
 padding-top: 5px;
 border: solid #aaa 1px;
 font-size: 12px;
-display: flex;
-justify-content: center;
 }
 .tbody{padding-top: 0px}
 .tblLink{
