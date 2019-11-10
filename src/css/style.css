@@ -38,14 +38,19 @@ font-size: 12px;
 }
 .tbl button{
   margin: 0 5px;
+  padding: 0;
+  margin: 5px;
+    padding: 0;
 }
 .tbody{
   padding-top: 0px;
 }
 .tblLink{
-  font-family: myfont;
+font-family: myfont;
 color: skyblue;
 text-decoration: none;
+padding: 5px 5px 0 5px;
+width: 100%;
 }
 .fn2tr td{
 border: solid #aaa 1px
@@ -53,3 +58,4 @@ border: solid #aaa 1px
 .fn2tr .td1{text-align: center;width: 50px}
 .fn2tr .td2{width: 190px }
 .fn2tr .td3{text-align: center;width: 15px}
+.th button{padding: 0}

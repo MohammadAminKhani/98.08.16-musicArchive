@@ -6,7 +6,6 @@ import Favorite from '@material-ui/icons/Favorite'
 import FavoriteBorder from '@material-ui/icons/FavoriteBorder'
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button'
-import { SubmitButton } from '@material-ui/core'
 
 export const Add = ({date,music,like,submit1}) =>{
   function submit(e) {e.preventDefault();
@@ -36,7 +35,7 @@ export const Add = ({date,music,like,submit1}) =>{
   name="like" defaultChecked={like} inputRef={ x => ref3 = x }  />}
   label="like the music?" />
   </div>
-  <input type='submit' value='OK'/>
+  <Button type='submit'>OK</Button>
 </form></div>)}
 Add.defaultProps={
   date: new Date().toLocaleDateString(),

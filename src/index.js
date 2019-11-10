@@ -4,6 +4,8 @@ import {BrowserRouter,Route,Switch} from 'react-router-dom'
 import {App} from './components/app'
 import {Err} from './components/err'
 import * as serviceWorker from './serviceWorker'
+import X1 from './components/materialui'
+import {X2} from './components/table'
 window.React = React
 
 render(
@@ -14,6 +16,8 @@ render(
       <Route exact path="/add" component={App}/>
       <Route exact path="/table" component={App}/>
       <Route exact path="/table/:x" component={App}/>
+      <Route exact path="/test" component={X1}/>
+      <Route exact path="/tbl" component={X2}/>
       <Route component={Err}/>
     </Switch>
   </BrowserRouter>
