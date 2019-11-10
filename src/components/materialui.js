@@ -1,7 +1,5 @@
-import React from 'react'
+import React from 'react';
 
-export const ChekbxHeart = () =>
-<div>
 
-</div>
-//2
+
+export const X1 =() => ''

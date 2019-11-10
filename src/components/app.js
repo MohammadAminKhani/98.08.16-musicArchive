@@ -6,6 +6,7 @@ import {About} from './about'
 import {Add} from './add'
 import {Tbl} from './tbl'
 import {Err} from './err'
+import {X1} from './materialui'
 import '../css/style.css'
 
 export class App extends Component{
@@ -24,6 +25,7 @@ fn1(x){
       <div className='app'>
 
       <div className='main'>
+      <X1/>
       { location.pathname === '/' ?
       <Home name='Dadashi' number={this.state.value001.length}/> :
       location.pathname === '/about' ?
