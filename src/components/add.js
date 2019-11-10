@@ -4,7 +4,6 @@ import FormControlLabel from '@material-ui/core/FormControlLabel'
 import Checkbox from '@material-ui/core/Checkbox'
 import Favorite from '@material-ui/icons/Favorite'
 import FavoriteBorder from '@material-ui/icons/FavoriteBorder'
-import { RootRef } from '@material-ui/core';
 
 export const Add = ({date,music,like,submit1}) =>{
   function submit(e) {e.preventDefault();
@@ -34,9 +33,8 @@ export const Add = ({date,music,like,submit1}) =>{
   <div >
   <FormControlLabel
   control={<Checkbox icon={<FavoriteBorder />} checkedIcon={<Favorite />}
-  name="like" defaultChecked={like} rootRef={ x => ref3 = x }  />}
+  name="like" defaultChecked={like} inputRef={ x => ref3 = x }  />}
   label="like the music?" />
-
   </div>
   <input type='submit' value="OK"/>
 </form></div>)}
