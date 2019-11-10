@@ -9,5 +9,6 @@ export const About = () =>
 </div>
 <p>Archive your musics!</p>
 <br/>
-<p>flexbox - @media - cssGrid - sass - foundation5</p>
+<p>میخوام دو شاخه کنم</p>
+<p>متریال یوای تکه تکه و متریال یوای کلی مثل متریال-تیبل</p>
 </div>

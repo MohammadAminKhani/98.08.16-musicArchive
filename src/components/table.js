@@ -1,64 +1,30 @@
-import React from 'react';
-import MaterialTable from 'material-table';
-// search 'install material-table'
+import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
+import { IoMdHeartEmpty } from "react-icons/io";
+import Button from '@material-ui/core/Button'
+import '../css/style.css'
 
-export const X2 = () => {
-
-  const [state, setState] = React.useState({
-    columns: [
-      { title: 'Name', field: 'name' },
-      { title: 'Surname', field: 'surname' },
-      { title: 'Birth Year', field: 'birthYear', type: 'numeric' },
-      {title: 'Birth Place',field: 'birthCity',lookup: { 34: 'İstanbul', 63: 'Şanlıurfa' } },
-    ],
-    data: [
-      { name: 'Mehmet', surname: 'Baran', birthYear: 1987, birthCity: 63 },
-      {name: 'Zerya Betül',surname: 'Baran',birthYear: 2017,birthCity: 34},
-    ],
-  });
-
+export const Tbl = ({key01,filter1}) =>{
+  const key001 = !filter1 || !filter1.match(/like/) ?
+  key01 : key01.filter(x => x[filter1])
   return (
-    <MaterialTable
-      title="Music Archive"
-      columns={state.columns}
-      data={state.data}
-      editable={{
-        onRowAdd: newData =>
-          new Promise(resolve => {
-            setTimeout(() => {
-              resolve();
-              setState(prevState => {
-                const data = [...prevState.data];
-                data.push(newData);
-                return { ...prevState, data };
-              });
-            }, 600);
-          }),
-        onRowUpdate: (newData, oldData) =>
-          new Promise(resolve => {
-            setTimeout(() => {
-              resolve();
-              if (oldData) {
-                setState(prevState => {
-                  const data = [...prevState.data];
-                  data[data.indexOf(oldData)] = newData;
-                  return { ...prevState, data };
-                });
-              }
-            }, 600);
-          }),
-        onRowDelete: oldData =>
-          new Promise(resolve => {
-            setTimeout(() => {
-              resolve();
-              setState(prevState => {
-                const data = [...prevState.data];
-                data.splice(data.indexOf(oldData), 1);
-                return { ...prevState, data };
-              });
-            }, 600);
-          }),
-      }}
-    />
-  );
-}
+    <div className="tbl">
+    <table>
+    <thead >
+    <th colSpan={3}>
+    <Button variant="contained" color="primary">
+    <Link exact className='tblLink' to="/table">All</Link></Button>
+    <Button variant="contained" color="primary">
+    <Link className='tblLink' to="/table/like">Liked</Link></Button>
+    </th>
+    </thead>
+    <tbody > {key001.map(Fn2)} </tbody>
+    </table>
+    </div>)}
+
+const Fn2 = ({date,music,like}) =>
+ <tr className='fn2tr'>
+   <td className='td1'>{date}</td>
+   <td className='td2'>{music}</td>
+   <td className='td3'>{like ? <IoMdHeartEmpty/> : null}</td>
+ </tr>
