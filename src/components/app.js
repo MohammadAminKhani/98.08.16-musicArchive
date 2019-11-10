@@ -23,6 +23,13 @@ fn1(x){
     return(
       <div className='app'>
 
+      <div className='materialui'>
+      <NavLink to='/signup' >signup</NavLink><br/>
+      <NavLink to='/signin' >signin</NavLink><br/>
+      <NavLink to='/material-table' >material-table</NavLink><br/>
+      <NavLink to='/navbutton' >navbutton</NavLink>
+      </div>
+
       <div className='main'>
       { location.pathname === '/' ?
       <Home name='Dadashi' number={this.state.value001.length}/> :
