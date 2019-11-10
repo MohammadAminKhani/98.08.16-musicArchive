@@ -8,7 +8,7 @@
     justify-content: center;
 }
 .menu {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   display: flex;
   justify-content: space-around;
@@ -33,10 +33,10 @@ font-size: 12px;
 }
 .tbody{padding-top: 0px}
 .tblLink{
-padding: 0 10px;
+color: #fff;
 text-decoration: none;
 }
-.tblLink , .fn2tr td{
+.fn2tr td{
 border: solid #aaa 1px
 }
 .fn2tr .td1{text-align: center;width: 50px}

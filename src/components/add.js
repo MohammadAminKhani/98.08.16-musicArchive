@@ -1,5 +1,10 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
+import FormControlLabel from '@material-ui/core/FormControlLabel'
+import Checkbox from '@material-ui/core/Checkbox'
+import Favorite from '@material-ui/icons/Favorite'
+import FavoriteBorder from '@material-ui/icons/FavoriteBorder'
+import { RootRef } from '@material-ui/core';
 
 export const Add = ({date,music,like,submit1}) =>{
   function submit(e) {e.preventDefault();
@@ -8,6 +13,7 @@ export const Add = ({date,music,like,submit1}) =>{
       music: ref2.value,
       like: ref3.checked
     })
+    console.log(ref3.checked);
     ref1.value = ""
     ref2.value = ""
     ref3.checked = false
@@ -26,9 +32,11 @@ export const Add = ({date,music,like,submit1}) =>{
     defaultValue={music} required autoComplete='off' />
   </div>
   <div >
-    <input id="idlike" type="checkbox" name="like"
-    defaultChecked={like} ref={ x => ref3 = x } />
-    <label htmlFor="idlike">I like this music!</label>
+  <FormControlLabel
+  control={<Checkbox icon={<FavoriteBorder />} checkedIcon={<Favorite />}
+  name="like" defaultChecked={like} rootRef={ x => ref3 = x }  />}
+  label="like the music?" />
+
   </div>
   <input type='submit' value="OK"/>
 </form></div>)}

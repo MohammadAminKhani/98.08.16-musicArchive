@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { NavLink} from 'react-router-dom'
 import { IoMdHeartEmpty } from "react-icons/io";
+import Button from '@material-ui/core/Button'
 import '../css/style.css'
 
 export const Tbl = ({key01,filter1}) =>{
@@ -11,10 +12,12 @@ export const Tbl = ({key01,filter1}) =>{
     <table>
     <thead >
     <th colSpan={3}>
+    <Button variant="contained" color="primary">
     <NavLink exact className='tblLink' activeClassName='selected'
-     to="/table">All</NavLink>
+     to="/table">All</NavLink>  </Button>
+    <Button variant="contained" color="primary">
     <NavLink className='tblLink' activeClassName='selected'
-     to="/table/like">Liked</NavLink>
+     to="/table/like">Liked</NavLink> </Button>
     </th>
     </thead>
     <tbody > {key001.map(Fn2)} </tbody>
