@@ -1,13 +1,13 @@
 import React,{Component,createElement} from 'react'
 import {render} from 'react-dom'
-import {BrowserRouter,Route,Switch,NavLink} from 'react-router-dom'
+import {BrowserRouter,Route,Switch} from 'react-router-dom'
 import {App} from './components/app'
 import {Err} from './components/err'
 import * as serviceWorker from './serviceWorker'
-import X0 from './components/signup'
-import X1 from './components/signin'
-import {X2} from './components/material-table'
-import X3 from './components/navbutton'
+import X0 from './material/signup'
+import X1 from './material/signin'
+import {X2} from './material/material-table'
+import X3 from './material/navbutton'
 window.React = React
 
 render(
